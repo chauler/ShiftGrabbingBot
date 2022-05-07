@@ -28,14 +28,14 @@ driver.implicitly_wait(2.0)
 driver.get("https://www.ffasecurity.com/admin/schedules/view/84")
 driver.implicitly_wait(2.0)
 
-shifts = driver.find_elements(By.XPATH, value="//tr[td[text()[contains(.,'Monday')]]]/following-sibling::tr[1]/td/a[1] | //tr[td[text()[contains(.,'Tuesday')]]]/following-sibling::tr[1]/td/a[1] | //tr[td[text()[contains(.,'Wednesday')]]]/following-sibling::tr[1]/td/a[1]")
-
-for shift in shifts:
-    shift.click()
-    WebDriverWait(driver, 5).until(expected_conditions.alert_is_present())
-    alert = Alert(driver)
-    print(alert.text)
-    alert.dismiss()
+#shifts = driver.find_elements(By.XPATH, value="//tr[td[text()[contains(.,'Monday')]]]/following-sibling::tr[1]/td/a[1] | //tr[td[text()[contains(.,'Tuesday')]]]/following-sibling::tr[1]/td/a[1] | //tr[td[text()[contains(.,'Wednesday')]]]/following-sibling::tr[1]/td/a[1]")
+#
+#for shift in shifts:
+#    shift.click()
+#    WebDriverWait(driver, 5).until(expected_conditions.alert_is_present())
+#    alert = Alert(driver)
+#    print(alert.text)
+#    alert.dismiss()
 
 while(True):
     shifts = driver.find_elements(By.XPATH, value="//tr[td[text()[contains(.,'Monday')]]]/following-sibling::tr[1]/td/a[1] | //tr[td[text()[contains(.,'Tuesday')]]]/following-sibling::tr[1]/td/a[1] | //tr[td[text()[contains(.,'Wednesday')]]]/following-sibling::tr[1]/td/a[1]")
