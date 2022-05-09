@@ -45,7 +45,7 @@ while(True):
         WebDriverWait(driver, 5).until(expected_conditions.alert_is_present())
         alert = Alert(driver)
         print(alert.text)
-        alert.dismiss()
+        alert.accept()
     driver.refresh()
     driver.implicitly_wait(3)
 
